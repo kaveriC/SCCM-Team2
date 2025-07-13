@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Data files
+data/*.csv
+data/*.parquet
+data/*.pickle
+data/*.h5
+data/raw/
+data/processed/
+data/interim/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Credentials
+credentials.json
+*.key
+secrets/
+
+# Claude 
+CLAUDE.md
+context7.json

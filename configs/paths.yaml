@@ -1,0 +1,27 @@
+mimic_root: "/Users/kavenchhikara/Desktop/CLIF/MIMIC-IV-3.1/physionet.org/files"
+
+mimic_iv:
+  hosp:
+    patients: "${mimic_root}/mimiciv/3.1/hosp/patients.csv.gz"
+    admissions: "${mimic_root}/mimiciv/3.1/hosp/admissions.csv.gz"
+    diagnoses_icd: "${mimic_root}/mimiciv/3.1/hosp/diagnoses_icd.csv.gz"
+    procedures_icd: "${mimic_root}/mimiciv/3.1/hosp/procedures_icd.csv.gz"
+    d_icd_diagnoses: "${mimic_root}/mimiciv/3.1/hosp/d_icd_diagnoses.csv.gz"
+    d_icd_procedures: "${mimic_root}/mimiciv/3.1/hosp/d_icd_procedures.csv.gz"
+    
+  icu:
+    icustays: "${mimic_root}/mimiciv/3.1/icu/icustays.csv.gz"
+    chartevents: "${mimic_root}/mimiciv/3.1/icu/chartevents.csv.gz"
+    d_items: "${mimic_root}/mimiciv/3.1/icu/d_items.csv.gz"
+    procedureevents: "${mimic_root}/mimiciv/3.1/icu/procedureevents.csv.gz"
+    
+  ed:
+    edstays: "${mimic_root}/mimiciv/3.1/ed/edstays.csv.gz"
+    
+mimic_cxr:
+  metadata: "${mimic_root}/mimic-cxr/2.0.0/cxr-record-list.csv.gz"
+  reports: "${mimic_root}/mimic-cxr/2.0.0/cxr-study-list.csv.gz"
+  
+mimic_note:
+  discharge: "${mimic_root}/mimic-iv-note/2.2/note/discharge.csv.gz"
+  radiology: "${mimic_root}/mimic-iv-note/2.2/note/radiology.csv.gz"
