@@ -15,6 +15,7 @@ ENV/
 *.ipynb_checkpoints/
 
 # Data files
+data/
 data/*.csv
 data/*.parquet
 data/*.pickle
@@ -42,6 +43,22 @@ credentials.json
 *.key
 secrets/
 
+# Configuration files with sensitive paths
+configs/paths.yaml
+
 # Claude 
 CLAUDE.md
 context7.json
+.claude
+
+# virtual env
+ards-env
+
+# output
+/outputs
+/results
+/reference_code
+/FINAL_SUMMARY_REPORT_files
+FINAL_SUMMARY_REPORT.*
+CONFIGURATION_UPDATE_SUMMARY.md
+

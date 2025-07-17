@@ -15,9 +15,6 @@ mimic_iv:
     d_items: "${mimic_root}/mimiciv/3.1/icu/d_items.csv.gz"
     procedureevents: "${mimic_root}/mimiciv/3.1/icu/procedureevents.csv.gz"
     
-  ed:
-    edstays: "${mimic_root}/mimiciv/3.1/ed/edstays.csv.gz"
-    
 mimic_cxr:
   metadata: "${mimic_root}/mimic-cxr/2.0.0/cxr-record-list.csv.gz"
   reports: "${mimic_root}/mimic-cxr/2.0.0/cxr-study-list.csv.gz"

@@ -1,0 +1,80 @@
+# ARDS Analysis Configuration Template
+# Copy this file to config.yaml and update the paths for your local environment
+
+# Data paths - Update these paths to match your local MIMIC-IV installation
+data:
+  # Base directory containing MIMIC-IV datasets
+  base_path: "/path/to/your/MIMIC-IV-3.1/physionet.org/files"
+  
+  # MIMIC-IV Note database path
+  mimic_note_path: "/path/to/your/MIMIC-IV-3.1/physionet.org/files/mimic-iv-note/2.2"
+  
+  # MIMIC-IV main database path  
+  mimic_iv_path: "/path/to/your/MIMIC-IV-3.1/physionet.org/files/mimiciv/3.1"
+  
+  # Specific file paths (relative to base paths above)
+  radiology_file: "note/radiology.csv.gz"
+  
+  # ICU tables
+  chartevents_file: "icu/chartevents.csv.gz"
+  icustays_file: "icu/icustays.csv.gz"
+  d_items_file: "icu/d_items.csv.gz"
+  
+  # Hospital tables
+  patients_file: "hosp/patients.csv.gz"
+  admissions_file: "hosp/admissions.csv.gz"
+  labevents_file: "hosp/labevents.csv.gz"
+  
+# Output configuration
+output:
+  # Base output directory (relative to project root)
+  base_dir: "outputs"
+  
+  # Subdirectories
+  checkpoints_dir: "checkpoints"
+  figures_dir: "figures"
+  tables_dir: "tables"
+  analysis_dir: "analysis"
+  
+# Processing configuration
+processing:
+  # Multiprocessing settings
+  max_processes: 32
+  test_max_processes: 4
+  
+  # Memory and performance settings
+  batch_size: 1000
+  checkpoint_frequency: 5  # Save checkpoint every N batches
+  
+  # Test mode settings
+  test_sample_size: 5000  # Number of radiology reports for test mode
+  
+# Analysis configuration
+analysis:
+  # BMI thresholds (WHO standards)
+  bmi_thresholds:
+    underweight: 18.5
+    normal: 24.9
+    overweight: 29.9
+    obesity: 30.0
+    
+  # ARDS criteria
+  ards_criteria:
+    pf_ratio_threshold: 300  # P/F ratio threshold for ARDS
+    peep_threshold: 5        # Minimum PEEP requirement
+    
+  # Statistical analysis settings
+  confidence_level: 0.95
+  alpha: 0.05
+  
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  
+# Visualization settings
+visualization:
+  figure_format: "png"
+  dpi: 300
+  style: "default"
+  color_palette: "husl"
